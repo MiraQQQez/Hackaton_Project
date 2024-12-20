@@ -1,0 +1,234 @@
+/* Маршруты */
+.routes {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+.routes-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.route-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.route-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.route-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1.5rem;
+}
+
+.route-info h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    color: var(--text-color);
+}
+
+.route-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0 0 1rem;
+}
+
+.route-info .price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.route-info .btn-secondary {
+    margin-top: auto;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 8px;
+}
+
+.route-info .btn-secondary:hover {
+    background: var(--hover-blue);
+    transform: translateY(-2px);
+}
+
+.route-info .btn-secondary:active {
+    transform: translateY(0);
+}
+
+/* Стили для контейнера маршрутов */
+.routes-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для карточки маршрута */
+.route-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+}
+
+.route-card h3 {
+    margin: 0 0 15px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.route-card p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.route-card .book-route {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+.route-card .book-route:hover {
+    background: #0056b3;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .routes-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
+
+/* Медиа-запросы остаются без изменений */
+@media (max-width: var(--desktop-xl)) {
+    .routes {
+        padding: 70px 0;
+    }
+
+    .route-card {
+        border-radius: 18px;
+    }
+
+    .route-info h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: var(--desktop)) {
+    .routes {
+        padding: 60px 0;
+    }
+
+    .routes-slider {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .route-info {
+        padding: 20px;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: var(--tablet)) {
+    .routes {
+        padding: 50px 0;
+    }
+
+    .routes-slider {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .route-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: var(--mobile-l)) {
+    .routes {
+        padding: 40px 0;
+    }
+
+    .route-info {
+        padding: 15px;
+    }
+
+    .route-info h3 {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: var(--mobile-s)) {
+    .routes-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .route-card img {
+        height: 160px;
+    }
+
+    .route-info h3 {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+} 

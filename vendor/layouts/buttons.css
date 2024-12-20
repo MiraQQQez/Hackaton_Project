@@ -1,0 +1,175 @@
+/* Базовые стили для кнопок */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+/* Основная кнопка */
+.btn-primary {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--hover-blue);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Вторичная кнопка */
+.btn-secondary {
+    background: var(--primary-blue);
+    color: white;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background: var(--hover-blue);
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+/* Состояние загрузки */
+.btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Кнопка опасного действия */
+.btn-danger {
+    background: linear-gradient(to right, #ef4444, #dc2626);
+    color: white;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2);
+}
+
+/* Стили для кнопок в формах */
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Стили для кнопок в модальных окнах */
+.auth-switch {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.auth-switch p {
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: var(--desktop-xl)) {
+    .btn {
+        padding: 0.7rem 1.4rem;
+    }
+}
+
+@media (max-width: var(--desktop)) {
+    .btn {
+        font-size: 0.95rem;
+        padding: 0.65rem 1.3rem;
+    }
+}
+
+@media (max-width: var(--tablet)) {
+    .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+    .modal .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: var(--mobile-l)) {
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .modal .btn {
+        padding: 0.65rem 0.9rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: var(--mobile-s)) {
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .modal .btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+.btn i {
+    transition: all 0.3s ease;
+}
+
+.btn:hover i {
+    transform: translateX(5px);
+}
+
+.social-link i {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.2);
+}

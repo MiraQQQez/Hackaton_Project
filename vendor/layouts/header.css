@@ -1,0 +1,170 @@
+/* Стили для шапки */
+.header {
+    background-color: white;
+    padding: 0;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: var(--z-header);
+    height: var(--header-height);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 50px;
+}
+
+.company-logo {
+    height: 100%;
+    width: auto;
+    padding: 5px 0;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    white-space: nowrap;
+    letter-spacing: -0.02em;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* Стили для навигации в хедере */
+.main-nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+}
+
+.nav-link {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+/* Медиа-запросы */
+@media (max-width: var(--desktop-xl)) {
+    .header-content {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: var(--desktop)) {
+    .nav-list {
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: var(--tablet)) {
+    .logo-text {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: var(--mobile-l)) {
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: var(--mobile-s)) {
+    .logo-container {
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+        height: 32px;
+    }
+
+    .nav-link {
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-content {
+        position: relative;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        padding: 0 15px;
+        padding-right: 20px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .mobile-menu-toggle {
+        right: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .mobile-menu-toggle {
+        width: 25px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .mobile-menu-toggle {
+        width: 22px;
+        height: 18px;
+    }
+}
+

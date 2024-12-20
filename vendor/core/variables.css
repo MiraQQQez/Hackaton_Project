@@ -1,0 +1,48 @@
+/* Семантические имена цветов для лучшей поддерживаемости */
+:root {
+    /* Основные цвета */
+    --primary-color: #2196F3; /* Основной синий - символизирует воду и надежность */
+    --secondary-color: #1976D2; /* Темно-синий - глубина и стабильность */
+    --accent-color: #64B5F6;
+    --text-color: #1E293B;
+    --light-bg: #F8FAFC;
+
+    /* Дополнительные цвета */
+    --primary-blue: #1D4ED8;
+    --hover-blue: #1E40AF;
+    --light-blue: #EFF6FF;
+    --background-color: #F8FAFC;
+    --border-color: #E2E8F0;
+
+    /* Градиенты */
+    --primary-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --hover-gradient: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+
+    /* Тени */
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --button-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Шрифты */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', 
+                    'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Размеры */
+    --header-height: 80px;
+    --footer-height: 80px;
+    --container-width: 1200px;
+    --border-radius: 20px;
+    --button-radius: 12px;
+
+    /* Анимации */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Z-индексы */
+    --z-header: 1000;
+    --z-modal: 1050;
+    --z-menu: 1040;
+} 

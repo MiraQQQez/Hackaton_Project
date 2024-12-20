@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержка - Полундра! Водное Такси</title>
+    
+    <!-- Предзагрузка критических ресурсов -->
+    <link rel="preload" href="assets/logos/logo.png" as="image">
+    
+    <!-- Подключение шрифтов с оптимизацией -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" 
+          rel="stylesheet"
+          media="print" 
+          onload="this.media='all'">
+    
+      <!-- Критические стили -->
+      <link rel="stylesheet" href="vendor/core/variables.css">
+      <link rel="stylesheet" href="vendor/core/normalize.css">
+      <link rel="stylesheet" href="vendor/core/style.css">
+      
+    <!-- Некритические стили -->
+    <link rel="stylesheet" href="vendor/layouts/navigation.css" media="print" onload="this.media='all'">   
+    <link rel="stylesheet" href="vendor/layouts/header.css" media="print" onload="this.media='all'">   
+    <link rel="stylesheet" href="vendor/layouts/modal.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/forms.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/buttons.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/hero.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/routes.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/how-it-works.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/testimonials.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/app-download.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/scrollbar.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/scroll-top.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/core/breakpoints.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="vendor/layouts/support.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <!-- Подключение скриптов -->
+    <!-- Утилиты -->
+    <script type="module" src="Js/core/utils/storage.js"></script>
+    <script type="module" src="Js/core/utils/modalManager.js"></script>
+    <script type="module" src="Js/core/utils/smoothScroll.js"></script>
+    <script type="module" src="Js/core/utils/animations.js"></script>
+    <script type="module" src="Js/core/utils/effects.js"></script>
+
+    <!-- Модальные окна -->
+    <script type="module" src="Js/core/auth/loginModal.js"></script>
+    <script type="module" src="Js/core/auth/bookingModal.js"></script>
+
+    <!-- Font Awesome асинхронно -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" 
+            async 
+            defer></script>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/logos/logo.png" 
+                         alt="Полундра! Водное Такси" 
+                         class="company-logo"
+                         loading="eager">
+                    <span class="logo-text">Полундра! Водное Такси</span>
+                </a>
+            </div>
+            
+            <!-- Добавляем кнопку мобильного меню -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="/booking" class="nav-link"><i class="fas fa-ship"></i> Забронировать</a></li>
+                    <li><a href="/about" class="nav-link"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="/support" class="nav-link"><i class="fas fa-headset"></i> Поддержка</a></li>
+                    <li><a href="/account" class="nav-link"><i class="fas fa-user"></i> Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Содержимое страницы поддержки -->
+        <section class="support-section">
+            <div class="container">
+                <h1>Поддержка</h1>
+                
+                <div class="support-grid">
+                    <!-- FAQ -->
+                    <div class="support-card">
+                        <div class="support-card-icon">
+                            <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="support-card-content">
+                            <h2>FAQ - Ответы на ваши вопросы</h2>
+                            <p>База знаний и ответы на часто задаваемые вопросы о водном такси</p>
+                            <button class="btn btn-primary" aria-label="Открыть часто задаваемые вопросы">
+                                <i class="fas fa-chevron-right"></i>
+                                Открыть FAQ
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Чат поддержки -->
+                    <div class="support-card">
+                        <div class="support-card-icon">
+                            <i class="fas fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <div class="support-card-content">
+                            <h2>Чат с поддержкой</h2>
+                            <p>Оперативная помощь от наших специалистов. Среднее время ответа — 2 минуты.</p>
+                            <button class="btn btn-primary" aria-label="Начать чат с поддержкой">
+                                <i class="fas fa-comment"></i>
+                                Начать чат
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Email поддержка -->
+                    <div class="support-card">
+                        <div class="support-card-icon">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="support-card-content">
+                            <h2>Email поддержка</h2>
+                            <p>Напишите нам на почту, если у вас есть предложения или сложный вопрос.</p>
+                            <a href="mailto:support@waterboat.ru" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                Написать письмо
+                            </a>
+                            <span class="support-email">support@waterboat.ru</span>
+                        </div>
+                    </div>
+
+                    <!-- Телефон -->
+                    <div class="support-card">
+                        <div class="support-card-icon">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="support-card-content">
+                            <h2>Телефон поддержки</h2>
+                            <p>Круглосуточная поддержка по телефону. Звоните в любое время.</p>
+                            <a href="tel:+78001234567" class="btn btn-primary">
+                                <i class="fas fa-phone"></i>
+                                Позвонить
+                            </a>
+                            <span class="support-phone">8 (800) 123-45-67</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дополнительная информация -->
+                <div class="support-info">
+                    <h3>Режим работы поддержки</h3>
+                    <div class="support-schedule">
+                        <div class="schedule-item">
+                            <i class="fas fa-headset"></i>
+                            <div class="schedule-details">
+                                <h4>Онлайн-чат и телефон</h4>
+                                <p>Круглосуточно, без выходных</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="schedule-details">
+                                <h4>Email поддержка</h4>
+                                <p>Ответ в течение 24 часов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <p>Мы предоставляем услуги водного такси и прогулок по водным маршрутам. Наша цель - сделать водный транспорт доступным и комфортным для всех.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="#" class="social-link" title="VK">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="social-link" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-angle-right"></i>О нас</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Наши услуги</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Маршруты</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Цены</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Поддержка</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-angle-right"></i>FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Правила бронирования</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Политика конфиденциальности</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i>Условия использования</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Полундра! Водное Такси. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <span>|</span>
+                <a href="#">Условия использования</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Добавьте перед закрывающим тегом body -->
+    <script defer src="Js/core/utils/mobileMenu.js"></script>
+</body>
+</html>

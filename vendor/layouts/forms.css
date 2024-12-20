@@ -1,0 +1,210 @@
+/* Стили для форм */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.form-group input {
+    width: 100% !important;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+}
+
+.toggle-password:hover {
+    color: var(--primary-blue);
+}
+
+.toggle-password i {
+    font-size: 16px;
+}
+
+/* Стили для ошибок */
+.form-group input.error {
+    border-color: #dc2626;
+    animation: shake 0.3s ease-in-out;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@media (max-width: var(--desktop-xl)) {
+    .form-group {
+        margin-bottom: 1.4rem;
+    }
+
+    .form-group label {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: var(--desktop)) {
+    .form-group input {
+        padding: 0.7rem 0.9rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media (max-width: var(--tablet)) {
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    .form-group input {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .toggle-password {
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: var(--mobile-l)) {
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .error-message {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: var(--mobile-s)) {
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group input {
+        padding: 0.45rem 0.65rem;
+        font-size: 0.85rem;
+    }
+
+    .toggle-password {
+        padding: 0.3rem;
+        right: 0.8rem;
+    }
+}
+
+/* Обновляем стили для контейнера пароля */
+.password-input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.password-input-container input {
+    width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    padding-right: 40px !important;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0 !important;
+}
+
+.password-input-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    margin: 0;
+}
+
+/* Фиксируем размеры модального окна */
+.modal-content {
+    width: 400px !important;
+    max-width: 90% !important;
+    box-sizing: border-box;
+    padding: 2rem !important;
+}
+
+/* Выравниваем все инпуты */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+/* Убираем лишние отступы */
+.form-group:last-child {
+    margin-bottom: 0;
+} 

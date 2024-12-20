@@ -1,0 +1,16 @@
+/* Брейкпоинты для адаптивной вёрстки */
+:root {
+    --desktop-xl: 1440px;
+    --desktop: 1024px;
+    --tablet: 768px;
+    --mobile-l: 375px;
+    --mobile-s: 320px;
+}
+
+/* Пример использования:
+@media (max-width: var(--desktop-xl)) { ... }
+@media (max-width: var(--desktop)) { ... }
+@media (max-width: var(--tablet)) { ... }
+@media (max-width: var(--mobile-l)) { ... }
+@media (max-width: var(--mobile-s)) { ... }
+*/ 

@@ -1,0 +1,170 @@
+/* Как это работает */
+.how-it-works {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.step {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.step:hover::after {
+    width: 80%;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 25px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+}
+
+.step:hover .step-number {
+    transform: scale(1.1) rotate(10deg);
+    background: var(--primary-blue);
+}
+
+.step h3 {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.step p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: var(--desktop-xl)) {
+    .how-it-works {
+        padding: 90px 0;
+    }
+
+    .step {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: var(--desktop)) {
+    .how-it-works {
+        padding: 80px 0;
+    }
+
+    .steps {
+        gap: 30px;
+    }
+
+    .step {
+        padding: 30px 20px;
+    }
+
+    .step-number {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: var(--tablet)) {
+    .how-it-works {
+        padding: 60px 0;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .step h3 {
+        font-size: 20px;
+    }
+
+    .step p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: var(--mobile-l)) {
+    .how-it-works {
+        padding: 50px 0;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .step {
+        padding: 25px 20px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: var(--mobile-s)) {
+    .step {
+        padding: 20px 15px;
+    }
+
+    .step h3 {
+        font-size: 18px;
+    }
+
+    .step p {
+        font-size: 14px;
+    }
+
+    .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+} 
